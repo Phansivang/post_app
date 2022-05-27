@@ -1,0 +1,11 @@
+{% extends 'app/main.html' %}
+{% load widget_tweaks %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <form method="POST">
+    {% csrf_token %}
+    {{ form|crispy}}<br>
+    <button class="btn btn-outline-info" type="submit">Sign Up</button>
+    <a class="btn btn-outline-dark" href="{% url 'login' %}">Login</a>
+    </form>
+{% endblock %}

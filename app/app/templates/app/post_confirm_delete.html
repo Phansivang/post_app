@@ -1,0 +1,10 @@
+{% extends 'app/main.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <h1>Are you sure?</h1>
+        <button class="btn btn-outline-danger btn-sm mt-1" type="submit" value="Yes">Yes</button>
+        <a class="btn btn-outline-info btn-sm mt-1" href="{% url 'home' %}">Cancel</a>
+    </form>
+{% endblock %}

@@ -1,0 +1,5 @@
+{% block content %}
+{% if not user is authenticated %}
+    <meta http-equiv="REFRESH" content="0;url=/login">
+{% endif %}
+{% endblock %}
